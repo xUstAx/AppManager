@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Менеджер приложений</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="toolbar">
+    <button id="btnAddCategory">+ Каталог</button>
+    <button id="btnAddApp">+ Приложение</button>
+    <button id="btnOpenCatalog">Открыть каталог</button>
+    <button id="btnSettings" class="settings-button" title="Настройки цветов" aria-label="Настройки цветов">⚙</button>
+  </header>
+
+  <nav id="tabs"></nav>
+
+  <main id="apps"></main>
+
+  <div id="categoryMenu" class="context-menu" hidden></div>
+
+  <div id="settingsOverlay" class="modal-overlay" hidden>
+    <section class="settings-dialog" role="dialog" aria-modal="true" aria-labelledby="settingsTitle">
+      <header class="settings-header">
+        <h2 id="settingsTitle">Цвета интерфейса</h2>
+        <button id="btnCloseSettings" class="icon-button" aria-label="Закрыть">×</button>
+      </header>
+      <label class="settings-scope">
+        Настраивать:
+        <select id="themeScope"></select>
+      </label>
+      <div id="colorFields" class="color-fields"></div>
+      <footer class="settings-footer">
+        <button id="btnResetTheme" class="secondary-button" hidden>Цвета по умолчанию</button>
+        <span class="settings-spacer"></span>
+        <button id="btnCancelSettings" class="secondary-button">Отмена</button>
+        <button id="btnSaveTheme">Сохранить</button>
+      </footer>
+    </section>
+  </div>
+
+<script src="script.js"></script>
+</body>
+</html>
